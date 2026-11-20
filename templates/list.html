@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Pokédex</h1>
+
+    <ul class="liste">
+        {{range .}}
+        <li>
+            <a href="/pokemon/{{.ID}}">
+                <img src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}">
+                <span>#{{.ID}} {{.Name.Fr}}</span>
+            </a>
+        </li>
+        {{else}}
+        <li>Aucun Pokémon à afficher.</li>
+        {{end}}
+    </ul>
+
+    <footer>Données fournies par <a href="https://tyradex.app">Tyradex</a></footer>
+</body>
+</html>
