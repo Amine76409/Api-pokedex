@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Name.Fr}}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>{{.Name.Fr}}</h1>
+    <img src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}">
+    <p>Numéro : {{.ID}}</p>
+    <p>Catégorie : {{.Category}}</p>
+
+    <p>Types :</p>
+    {{range .Types}}
+    <img src="{{.Image}}" alt="{{.Name}}" width="30"> {{.Name}}
+    {{end}}
+
+    <p><a href="/pokemon">Retour à la liste</a></p>
+
+    <footer>Données fournies par <a href="https://tyradex.app">Tyradex</a></footer>
+</body>
+</html>
